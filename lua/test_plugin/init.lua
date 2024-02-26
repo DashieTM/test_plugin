@@ -8,9 +8,9 @@ end
 
 function test()
 	if opts.what == 0 then
-		vim.cmd("echo", "pingpang")
+		vim.cmd("echo 'pingpang'")
 	else
-		vim.cmd("echo", "not pingpang")
+		vim.cmd("echo 'not pingpang'")
 	end
 end
 
