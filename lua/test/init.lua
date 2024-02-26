@@ -1,5 +1,3 @@
-local test_plugin = {}
-
 local config = {
 	what = 0,
 }
@@ -16,4 +14,7 @@ function test()
 	end
 end
 
-return test_plugin
+return {
+	setup = setup,
+	test = test,
+}
