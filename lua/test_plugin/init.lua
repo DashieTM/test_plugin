@@ -2,27 +2,24 @@ local opts = {
 	what = 0,
 }
 
-function setup(user_config)
+local test_plugin = {
+	opts = opts,
+}
+
+function test_plugin.setup(user_config)
 	vim.tbl_deep_extend("force", opts, user_config)
 end
 
-function config(user_config)
+function test_plugin.config(user_config)
 	vim.tbl_deep_extend("force", opts, user_config)
 end
 
-function test()
-	if opts.what == 0 then
+function test_plugin.test()
+	if test_plugin.opts.what == 0 then
 		vim.cmd("echo 'pingpang'")
 	else
 		vim.cmd("echo 'not pingpang'")
 	end
 end
-
-local test_plugin = {
-	setup = setup,
-	test = test,
-	config = config,
-	opts = opts,
-}
 
 return test_plugin
