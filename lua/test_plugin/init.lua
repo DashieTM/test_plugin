@@ -7,12 +7,12 @@ local test_plugin = {
 }
 
 function test_plugin.setup(user_config)
-  opts = user_config
+  test_plugin.opts = user_config
 	vim.tbl_deep_extend("force", opts, user_config)
 end
 
 function test_plugin.config(user_config)
-  opts = user_config
+  test_plugin.opts = user_config
 	vim.tbl_deep_extend("force", opts, user_config)
 end
 
