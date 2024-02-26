@@ -21,6 +21,8 @@ end
 local test_plugin = {
 	setup = setup,
 	test = test,
+	config = config,
+	opts = opts,
 }
 
 return test_plugin
