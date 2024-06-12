@@ -1,5 +1,5 @@
 local opts = {
-	what = 0,
+	val = 0,
 }
 
 local test_plugin = {
@@ -17,10 +17,10 @@ function test_plugin.config(user_config)
 end
 
 function test_plugin.test()
-	if test_plugin.opts.what == 0 then
-		vim.cmd("echo 'pingpang'")
+	if test_plugin.opts.val == 0 then
+		vim.cmd("echo 'val is 0'")
 	else
-		vim.cmd("echo 'not pingpang'")
+		vim.cmd("echo 'val is not 0'")
 	end
 end
 
